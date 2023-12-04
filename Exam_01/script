@@ -1,0 +1,36 @@
+#!/bin/bash
+DIR="/home/shaher/exam_directory"
+# init
+cd ~
+# Check if the directory exists or not
+if [ -d "$DIR" ]; then
+	echo "Directory $DIR is found"
+	#check if the directory contains file or is empty
+	if [ "$(ls -A $DIR)" ]; then
+     echo "$DIR is not Empty"
+     cd ~/exam_directory
+     echo "Files in the $DIR are:"
+     ls -lh
+	else
+    echo "$DIR is Empty"
+    cd ~/exam_directory
+    echo "file1.txt, file2.txt, file3.txt will be created"
+    touch file1.txt
+    touch file2.txt
+    touch file3.txt
+    echo "Files created are:"
+    ls -h
+	fi
+else
+	echo "Directory $DIR is not found."
+	echo "exam_directory will be created"
+	mkdir exam_directory
+	cd ~/exam_directory
+	echo "file1.txt, file2.txt, file3.txt will be created"
+	touch file1.txt
+	touch file2.txt
+	touch file3.txt
+	echo "Files created are"
+	ls -h
+fi
+echo "Thank you :)"
