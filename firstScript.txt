@@ -1,8 +1,0 @@
-#!/bin/bash
-mkdir /home/shaher/myDirectory
-mkdir /home/shaher/myDirectory/secondDirectory
-cd /home/shaher/myDirectory/secondDirectory
-touch myNotePaper
-cp /home/shaher/myDirectory/secondDirectory/myNotePaper /home/shaher/myDirectory
-cd /home/shaher/myDirectory
-mv myNotePaper myOldNotePaper
