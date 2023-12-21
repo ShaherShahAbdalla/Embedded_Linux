@@ -1,0 +1,36 @@
+					Section 2:
+					
+					
+1. Create a supplementary (Secondary) group called pgroup with group ID of 30000
+
+sudo groupadd -g 30000 pgroup
+----------------------------------------------------------------------------------
+		2. Lock any user created account so he can't log in
+
+sudo passwd -l shaher
+----------------------------------------------------------------------------------
+				3. Delete User Account
+
+#if you want to delete the user without delete its home directory
+sudo userdel shaher
+
+#if you want to delete the user and its home directory in one command
+sudo userdel -r shaher
+----------------------------------------------------------------------------------
+				4. Delete group account
+				
+sudo groupdel shaher
+----------------------------------------------------------------------------------
+5. State the difference between adduser and useradd with example shown.
+
+- adduser:
+sudo adduser khaled
+	this command will create new user in /etc/passwd named khaled, but before
+that you will be asked to enter some other info as password for this user, id,
+tel. number and so on ..., it runs a script using inside it the command useradd :).
+
+- useradd:
+sudo useradd khaled
+	This command will create a new user in /etc/passwd named khaled, but in case
+that you want to set a password for it you need to do it manually or by adding options
+to the command to add such extras.
