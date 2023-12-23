@@ -1,0 +1,8 @@
+					Sysroot
+It is the root file system that will be copied to the target. It includes two main folders which are (usr) and (lib). (usr) includes binaries, includes and libraries that are needed by the user. (lib) includes some static and dynamic libraries that the target will need.
+
+--------------------------------------------------------------------------------------------------
+					Binutil
+It includes: strace, ar, ld, objdump, ...
+
+It is a set of tools or binaries or applications for a specific architecture
